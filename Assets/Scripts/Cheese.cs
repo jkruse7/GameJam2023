@@ -1,32 +1,37 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UIElements;
+using UnityEngine.UI;
 
 public class Cheese : ageableObject
 {
     [SerializeField] private Material agedMaterial;
-    [SerializeField] private Slider slider;
+    [SerializeField] private GameObject slider;
     [SerializeField] private float ageTime = 2;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        //o
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public override void age(){
-        if(!isAged){
-            progress += (1 * Time.deltaTime);
-            slider.value = progress/ageTime;
+        if(progress >= ageTime){
+            isAged = true;
+            slider.SetActive(false);
             GetComponent<Renderer>().material = agedMaterial;
-            Debug.Log(progress);
+        }
+        else if(!isAged){
+            slider.SetActive(true);
+            progress += (1 * Time.deltaTime);
+            slider.GetComponent<Slider>().value = progress/ageTime;
+            
             //isAged = true;
         }
         //var selectionRenderer = selection.GetComponent<Renderer>();
