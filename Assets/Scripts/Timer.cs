@@ -2,9 +2,10 @@ using UnityEngine;
 using TMPro;
 using System;
 
+
 public class Timer : MonoBehaviour
 {
-    public TextMeshPro timerText;
+    public TMP_Text timerText;
 
     [Header("Time Values")]
     [Range(0,60)]
@@ -40,7 +41,9 @@ public class Timer : MonoBehaviour
             if(showMilliseconds)
                 timerText.text = TimeSpan.FromSeconds(currentSeconds).ToString(@"hh\:mm\:ss\:fff");
             else
-                timerText.text = TimeSpan.FromSeconds(currentSeconds).ToString(@"hh\:mm\:ss");
+                //timerText.text = TimeSpan.FromSeconds(currentSeconds).ToString(@"hh\:mm\:ss");
+                timerText.text = "time";
+                //timerText.setText(TimeSpan.FromSeconds(currentSeconds).ToString(@"hh\:mm\:ss"));
    
         }
     }
