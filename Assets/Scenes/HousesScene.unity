@@ -13646,6 +13646,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0.193
       objectReference: {fileID: 0}
+    - target: {fileID: 207623746982130446, guid: e89272340ce1e644da2a6d4ab2ca2b9d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.252
+      objectReference: {fileID: 0}
     - target: {fileID: 1752531072833581001, guid: e89272340ce1e644da2a6d4ab2ca2b9d, type: 3}
       propertyPath: m_Name
       value: House1Mod
