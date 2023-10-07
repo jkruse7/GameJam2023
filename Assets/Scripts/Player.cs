@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {   
-    [SerializeField] private Material highlightMaterial;
+    
     [SerializeField] private string ageTag = "ageable";
     // Start is called before the first frame update
     void Start()
@@ -20,7 +20,7 @@ public class Player : MonoBehaviour
         if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, 100.0f)){
             var selection = hit.transform;
             
-            if (selection.CompareTag(ageTag) && Input.GetMouseButtonDown(0)){
+            if (selection.CompareTag(ageTag) && Input.GetMouseButton(0)){
 
                 selection.GetComponent<Cheese>().age();
 
