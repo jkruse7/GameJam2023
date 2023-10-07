@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-    
+
 public class BillboardFX : MonoBehaviour
 {
 	public Transform camTransform;
@@ -11,6 +11,7 @@ public class BillboardFX : MonoBehaviour
     void Start()
     {
         originalRotation = transform.rotation;
+        camTransform = Camera.main.transform;
     }
 
     void Update()

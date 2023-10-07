@@ -11,7 +11,8 @@ public class conveyor : MonoBehaviour
     void Start()
     {
         for(int i = 0; i <= onBelt.Count -1 ; i++){
-            onBelt[i].GetComponent<Rigidbody>().velocity = speed * direction * Time.deltaTime;
+            //onBelt[i].GetComponent<Rigidbody>().velocity = speed * direction;
+            onBelt[i].GetComponent<Rigidbody>().AddForce(speed * transform.forward , ForceMode.Impulse);
         }
     }
 
