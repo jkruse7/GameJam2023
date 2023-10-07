@@ -205,6 +205,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   highlightMaterial: {fileID: 2100000, guid: 9d22639ad0840f147a581c4de2cddd47, type: 2}
+  ageTag: ageable
 --- !u!1001 &764053631
 PrefabInstance:
   m_ObjectHideFlags: 0
