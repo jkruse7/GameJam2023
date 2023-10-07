@@ -7,7 +7,7 @@ public class CheeseFactory : ageableObject
 {
     [SerializeField] private Material agedMaterial;
     [SerializeField] private GameObject slider;
-    [SerializeField] private Timer timer;
+    [SerializeField] private  GameObject  timer;
     [SerializeField] private float ageTime = 2;
 
     // Start is called before the first frame update
@@ -25,7 +25,7 @@ public class CheeseFactory : ageableObject
     public override void age(){
         if(progress >= ageTime){
             if(!isAged){    
-                timer.addTime(5);
+                timer.GetComponent<Timer>().addTime(5);
             }
             isAged = true;
             slider.SetActive(false);

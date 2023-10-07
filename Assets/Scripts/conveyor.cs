@@ -17,8 +17,13 @@ public class conveyor : MonoBehaviour
     void Update()
     {
         for(int i = 0; i <= onBelt.Count -1 ; i++){
-            
-            onBelt[i].GetComponent<Rigidbody>().AddForce(speed * direction , ForceMode.Impulse);
+            if(onBelt[i] == null){
+                onBelt.Remove(onBelt[i]);
+
+            }
+            else{
+                onBelt[i].GetComponent<Rigidbody>().AddForce(speed * direction , ForceMode.Impulse);
+            }
         }
     }
 

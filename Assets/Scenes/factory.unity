@@ -1656,6 +1656,7 @@ GameObject:
   - component: {fileID: 766078110}
   - component: {fileID: 766078109}
   - component: {fileID: 766078108}
+  - component: {fileID: 766078111}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -1693,7 +1694,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -1749,6 +1750,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 766078106}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &766078111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 766078106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5dbba9097c140f448950d17bcc5ab99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &844497064
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2066,6 +2079,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29ce31cc3e5734c47b5fc0d699374ca1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawners:
+  - {fileID: 1519646340}
+  - {fileID: 1186404084}
+  objects:
+  - {fileID: 33740706}
+  rate: 0.2
+  time: 3
 --- !u!4 &884193308
 Transform:
   m_ObjectHideFlags: 0
@@ -2603,7 +2623,7 @@ Transform:
   m_GameObject: {fileID: 1186404084}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.32714, y: 0.826, z: 0}
+  m_LocalPosition: {x: -0.32447, y: 0.817, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2861,6 +2881,7 @@ GameObject:
   - component: {fileID: 1307117520}
   - component: {fileID: 1307117519}
   - component: {fileID: 1307117518}
+  - component: {fileID: 1307117521}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -2898,7 +2919,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -2954,6 +2975,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1307117516}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1307117521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1307117516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5dbba9097c140f448950d17bcc5ab99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1378987528
 GameObject:
   m_ObjectHideFlags: 0
@@ -3070,6 +3103,7 @@ GameObject:
   - component: {fileID: 1381572268}
   - component: {fileID: 1381572267}
   - component: {fileID: 1381572266}
+  - component: {fileID: 1381572269}
   m_Layer: 0
   m_Name: Clock
   m_TagString: Untagged
@@ -3231,6 +3265,24 @@ RectTransform:
   m_AnchoredPosition: {x: -26.82, y: 3.61}
   m_SizeDelta: {x: 20, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1381572269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1381572265}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f619cfa2ad1c2734783c9cbaf46377a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timerText: {fileID: 1381572266}
+  seconds: 30
+  minutes: 1
+  hours: 0
+  fontColor: {r: 0, g: 0, b: 0, a: 0}
+  showMilliseconds: 0
 --- !u!1001 &1461748928
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3544,7 +3596,7 @@ Transform:
   m_GameObject: {fileID: 1519646340}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.25634, y: 0.98, z: 0}
+  m_LocalPosition: {x: 0.2504, y: 0.791, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4083,7 +4135,7 @@ MonoBehaviour:
   progress: 0
   agedMaterial: {fileID: 2100000, guid: ed60ee421bc76ea42ac2dd0e6a7c94ee, type: 2}
   slider: {fileID: 2422996912921452418}
-  timer: {fileID: 0}
+  timer: {fileID: 1381572265}
   ageTime: 1.5
 --- !u!1 &1644491011341951385
 GameObject:
@@ -4781,7 +4833,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9c64706fef5eeb3449e1ba3fcf1e3a3f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -33.736
+      value: -34.835
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9c64706fef5eeb3449e1ba3fcf1e3a3f, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4789,7 +4841,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9c64706fef5eeb3449e1ba3fcf1e3a3f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -18.957
+      value: -18.015
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9c64706fef5eeb3449e1ba3fcf1e3a3f, type: 3}
       propertyPath: m_LocalRotation.w

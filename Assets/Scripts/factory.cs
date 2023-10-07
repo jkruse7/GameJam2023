@@ -5,10 +5,11 @@ using UnityEngine;
 public class factory : MonoBehaviour
 {
     // Start is called before the first frame update
-    private GameObject[] spawners;
-    private GameObject[] objects;
-    private float rate;
-    private float time;
+    
+    [SerializeField] private GameObject[] spawners;
+    [SerializeField] private GameObject[] objects;
+    [SerializeField] private float rate = 0.2f;
+    [SerializeField] private float time = 1f;
     void Start()
     {
         InvokeRepeating("gameTick", 1f, time);
