@@ -10,16 +10,16 @@ public class conveyor : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        for(int i = 0; i <= onBelt.Count -1 ; i++){
-            //onBelt[i].GetComponent<Rigidbody>().velocity = speed * direction;
-            onBelt[i].GetComponent<Rigidbody>().AddForce(speed * transform.forward , ForceMode.Impulse);
-        }
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        for(int i = 0; i <= onBelt.Count -1 ; i++){
+            
+            onBelt[i].GetComponent<Rigidbody>().AddForce(speed * direction , ForceMode.Impulse);
+        }
     }
 
     private void OnCollisionEnter(Collision col){
