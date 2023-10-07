@@ -24,7 +24,7 @@ public class Timer : MonoBehaviour
 
     void Start()
     {
-        timerText.color = fontColor;
+
         timerDefault = 0;
         timerDefault += (seconds + (minutes * 60) + (hours * 60 * 60));
         currentSeconds = timerDefault;
@@ -41,9 +41,8 @@ public class Timer : MonoBehaviour
             if(showMilliseconds)
                 timerText.text = TimeSpan.FromSeconds(currentSeconds).ToString(@"hh\:mm\:ss\:fff");
             else
-                //timerText.text = TimeSpan.FromSeconds(currentSeconds).ToString(@"hh\:mm\:ss");
-                timerText.text = "time";
-                //timerText.setText(TimeSpan.FromSeconds(currentSeconds).ToString(@"hh\:mm\:ss"));
+                timerText.text = TimeSpan.FromSeconds(currentSeconds).ToString(@"hh\:mm\:ss");
+
    
         }
     }
@@ -54,5 +53,9 @@ public class Timer : MonoBehaviour
             timerText.text = "00:00:00:000";
         else
             timerText.text = "00:00:00";
+    }
+
+    public void addTime(int time){
+        currentSeconds += time;
     }
 }

@@ -23,7 +23,7 @@ public class Player : MonoBehaviour
             
             if (selection.CompareTag(ageTag) && Input.GetMouseButton(0)){
 
-                selection.GetComponent<Cheese>().age();
+                selection.GetComponent<ageableObject>().age();
 
             }
 
