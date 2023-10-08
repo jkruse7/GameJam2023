@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class CheeseFactory : ageableObject
+public class milkFactory : ageableObject
 {
     [SerializeField] private Material agedMaterial;
     [SerializeField] private GameObject slider;
-    [SerializeField] private  GameObject  timer;
+    [SerializeField] private GameObject milk;
+
     [SerializeField] private float ageTime = 2;
 
     // Start is called before the first frame update
@@ -24,12 +25,10 @@ public class CheeseFactory : ageableObject
 
     public override void age(){
         if(progress >= ageTime){
-            if(!isAged){    
-                timer.GetComponent<Timer>().addTime(5);
-            }
+
             isAged = true;
             slider.SetActive(false);
-            GetComponent<Renderer>().material = agedMaterial;
+            milk.GetComponent<Renderer>().material = agedMaterial;
             
         }
         else if(!isAged){
