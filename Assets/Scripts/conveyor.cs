@@ -22,7 +22,7 @@ public class conveyor : MonoBehaviour
 
             }
             else{
-                onBelt[i].GetComponent<Rigidbody>().AddForce(speed * direction , ForceMode.Impulse);
+                onBelt[i].GetComponent<Rigidbody>().AddForce(speed * direction * Time.deltaTime , ForceMode.Impulse);
             }
         }
     }

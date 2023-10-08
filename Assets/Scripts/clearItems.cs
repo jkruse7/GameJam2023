@@ -18,6 +18,8 @@ public class clearItems : MonoBehaviour
 
     private void OnTriggerEnter(Collider col)
     {
-        Destroy(col.gameObject);
+        if(!col.gameObject.CompareTag("Player")){
+            Destroy(col.gameObject);
+        }
     }
 }
