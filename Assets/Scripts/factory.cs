@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class factory : MonoBehaviour
 {
-    private GameObject[] items;
-    private spawners
+ 
     // Start is called before the first frame update
     
     [SerializeField] private GameObject[] spawners;
