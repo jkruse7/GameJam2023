@@ -10,7 +10,7 @@ public class factory : MonoBehaviour
     [SerializeField] private GameObject[] spawners;
     [SerializeField] private GameObject[] objects;
     [SerializeField] private float rate = 0.2f;
-    [SerializeField] private float time = 1f;
+        [SerializeField] private float time = 1f;
     void Start()
     {
         InvokeRepeating("gameTick", 1f, time);
